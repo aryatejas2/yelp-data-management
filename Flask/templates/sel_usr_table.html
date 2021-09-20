@@ -1,0 +1,23 @@
+{% extends 'select_user.html' %} {% block table %} {% if data|length %}
+
+<table id="data" class="centered striped">
+  <thead style="text-align: center">
+  <tr>
+    <th>Name</th>
+    <th>Review</th>
+    <th>Star Given</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for n in data[0] %}
+    <tr>
+      <td>{{ n[0] }}</td>
+      <td>{{ n[1] }}</td>
+      <td>{{ n[2] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<h2>No data found.</h2>
+{% endif %} {% endblock %}

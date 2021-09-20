@@ -1,0 +1,1 @@
+SELECT DISTINCT(businessTable.name), businessTable.address, reviewTable.stars from businessTable join restaurantTable on businessTable.business_id=restaurantTable.business_id join reviewTable on businessTable.business_id=reviewTable.b_id where businessTable.postal_code='28210' and reviewTable.stars>'3' order by reviewTable.stars DESC;

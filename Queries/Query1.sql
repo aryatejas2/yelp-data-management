@@ -1,0 +1,1 @@
+select name from userTable where name like 'ak%' and u_id in (select u_id from reviewTable group by u_id having count(u_id) > 3 );
